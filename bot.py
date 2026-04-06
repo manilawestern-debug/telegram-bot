@@ -3,7 +3,7 @@ from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filte
 
 import os
 
-TOKEN = os.getenv("8749296190:AAFTt1x-cs9Gq994KV_Uvo6ULorC4RYobo4")
+TOKEN = os.getenv("8749296190:AAHHCUQChGuT_HGr9hN1IlStu0zkX96-MpE")
 
 # ✅ Auto approve join requests
 async def approve(update: Update, context: ContextTypes.DEFAULT_TYPE):
