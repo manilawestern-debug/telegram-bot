@@ -1,3 +1,4 @@
+import asyncio
 from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filters
 
@@ -12,8 +13,12 @@ async def delete_service(update: Update, context: ContextTypes.DEFAULT_TYPE):
         except:
             pass
 
-app = ApplicationBuilder().token(TOKEN).build()
+async def main():
+    app = ApplicationBuilder().token(TOKEN).build()
 
-app.add_handler(MessageHandler(filters.StatusUpdate.ALL, delete_service))
+    app.add_handler(MessageHandler(filters.StatusUpdate.ALL, delete_service))
 
-app.run_polling()
+    await app.run_polling()
+
+if __name__ == "__main__":
+    asyncio.run(main())
