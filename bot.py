@@ -2,8 +2,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filters, ChatJoinRequestHandler
 
 import os
-
-TOKEN = os.getenv("8749296190:AAHHCUQChGuT_HGr9hN1IlStu0zkX96-MpE")
+print("TOKEN:", os.getenv("8749296190:AAHHCUQChGuT_HGr9hN1IlStu0zkX96-MpE"))
 
 # ✅ Auto approve join requests
 async def approve(update: Update, context: ContextTypes.DEFAULT_TYPE):
